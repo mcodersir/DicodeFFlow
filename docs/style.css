@@ -357,7 +357,7 @@ a:focus-visible { outline: 3px solid #6aa7df; outline-offset: 3px; }
   .popup-layout { grid-template-columns: 1fr; gap: 27px; }
   .popup-copy h2 { font-size: 26px; }
   .popup-copy p { font-size: 13px; }
-  .popup-frame { width: min(100%, 295px); }
+  .popup-frame { width: min(100%, 360px); }
 }
 
 @media (max-width: 480px) {
