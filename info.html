@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>DicodeFFlow — راهنما</title>
+<style>
+  @font-face { font-family: "Vazirmatn"; src: url("assets/fonts/Vazirmatn-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: "Vazirmatn"; src: url("assets/fonts/Vazirmatn-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+  :root {
+    --page: #07101f;
+    --card: #0d1a2d;
+    --line: rgba(73, 124, 177, 0.32);
+    --brand: #58c0ff;
+    --ink: #f3f8ff;
+    --muted: #a9bdd2;
+    --font: "Vazirmatn", Tahoma, "Segoe UI", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% 0, rgba(40, 169, 255, 0.18), transparent 42%), var(--page);
+    color: var(--ink);
+    font-family: var(--font);
+  }
+  .card {
+    max-width: 440px;
+    margin: 24px;
+    padding: 32px 28px;
+    text-align: center;
+    background: rgba(13, 26, 45, 0.96);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+  .card > img {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 14px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid rgba(88, 192, 255, 0.28);
+  }
+  h1 { margin: 0 0 10px; font-size: 21px; }
+  .intro, .step p { margin: 0; font-size: 13.5px; line-height: 1.9; color: var(--muted); }
+  .step { display: flex; gap: 10px; text-align: right; margin: 16px 0; }
+  .step-n { flex-shrink: 0; font-size: 12px; font-weight: 700; color: var(--brand); direction: ltr; }
+  .notice { margin: 20px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: 11px; line-height: 1.8; color: var(--muted); }
+  .socials { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  a { color: var(--brand); text-decoration: none; font-size: 12px; }
+</style>
+</head>
+<body>
+<main class="card">
+  <img src="assets/dicodefflow-logo.png" alt="DicodeFFlow">
+  <h1 dir="ltr">DicodeFFlow</h1>
+  <p class="intro">DicodeFFlow؛ دیکد برای گوگل فلو، برای استفاده از Google Flow بدون تغییر ریجن.</p>
+  <div class="step"><span class="step-n">۰۱</span><p>در پنجره افزونه، دکمه فعال سازی را روشن کنید.</p></div>
+  <div class="step"><span class="step-n">۰۲</span><p>اگر تب Google Flow باز است، آن را دوباره بارگذاری کنید تا کد اصلی افزونه در ابتدای صفحه اجرا شود.</p></div>
+  <div class="step"><span class="step-n">۰۳</span><p>برای شروع، از دکمه «باز کردن Flow» در پنجره افزونه استفاده کنید.</p></div>
+  <p class="notice">کدهای عملکردی اصلی افزونه برای حفظ سازگاری دست نخورده نگه داشته شده اند. پیش از استفاده، مجوزها و مقصدهای شبکه نمایش داده شده در manifest را بررسی کنید.</p>
+  <div class="socials" aria-label="لینک های دیکد">
+    <a href="https://dicode.ir/mag" target="_blank" rel="noopener noreferrer">مجله دیکد</a>
+    <a href="https://t.me/dicodeir" target="_blank" rel="noopener noreferrer">تلگرام</a>
+    <a href="https://www.youtube.com/@Dicodeir" target="_blank" rel="noopener noreferrer">یوتیوب</a>
+    <a href="https://www.aparat.com/Dicode" target="_blank" rel="noopener noreferrer">آپارات</a>
+  </div>
+</main>
+</body>
+</html>

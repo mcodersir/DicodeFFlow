@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none';">
+<title>DicodeFFlow</title>
+<link rel="stylesheet" href="panel.css">
+</head>
+<body>
+<main>
+  <div class="glow" aria-hidden="true"></div>
+
+  <header class="brand">
+    <img class="brand-mark" src="assets/dicodefflow-logo.png" alt="DicodeFFlow" width="38" height="38">
+    <div class="brand-text">
+      <span class="brand-word" dir="ltr">DicodeFFlow</span>
+      <span class="brand-sub">دیکد برای گوگل فلو</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 class="hero-title">ورود به Google Flow<br><span class="hero-accent" dir="ltr">با DicodeFFlow</span></h1>
+    <p class="hero-sub">این ابزار اختصاصی دیکد برای Google Flow آماده شده است. با روشن کردن دکمه زیر، بدون تغییر ریجن وارد Flow شوید و از آن استفاده کنید.</p>
+  </section>
+
+  <section class="card control">
+    <div class="control-row">
+      <div class="control-label">
+        <span class="control-name">فعال سازی دسترسی</span>
+        <span class="control-hint">پس از روشن کردن، تب Flow را دوباره بارگذاری کنید.</span>
+      </div>
+      <button id="toggle" class="switch" role="switch" aria-checked="false" aria-label="فعال سازی دسترسی" disabled>
+        <span class="switch-thumb"></span>
+      </button>
+    </div>
+    <div id="status" class="status" role="status">
+      <span class="status-dot status-dot--idle"></span>
+      <span class="status-text">در حال بررسی…</span>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button id="open" class="btn btn-primary">باز کردن Flow</button>
+    <button id="reload" class="btn btn-ghost" hidden>بارگذاری دوباره تب Flow</button>
+  </div>
+
+  <p id="error" class="error" role="alert"></p>
+
+  <p class="note">بعد از روشن یا خاموش کردن ابزار، برای اعمال تغییرات تب های باز Flow را دوباره بارگذاری کنید.</p>
+
+  <footer class="foot">
+    <div class="foot-brand">
+      <img src="assets/dicodefflow-logo.png" alt="DicodeFFlow" width="30" height="30">
+      <div>
+        <strong class="foot-name" dir="ltr">DicodeFFlow</strong>
+        <span class="foot-caption">دیکد برای گوگل فلو</span>
+      </div>
+    </div>
+
+    <div class="follow-label">دیکد را دنبال کنید</div>
+    <nav class="links" aria-label="لینک های دیکد">
+      <a href="https://dicode.ir/mag" target="_blank" rel="noopener noreferrer" aria-label="مجله دیکد">
+        <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 12h17M12 3c2.25 2.45 3.4 5.45 3.4 9S14.25 18.55 12 21M12 3C9.75 5.45 8.6 8.45 8.6 12S9.75 18.55 12 21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>مجله دیکد</span>
+      </a>
+      <a href="https://t.me/dicodeir" target="_blank" rel="noopener noreferrer" aria-label="تلگرام دیکد">
+        <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm4.962 7.224c.1-.002.321.023.465.14a.5.5 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024q-.159.037-5.061 3.345-.72.495-1.302.48c-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789q.04-.324.893-.663 5.247-2.286 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635"/></svg>
+        <span>تلگرام</span>
+      </a>
+      <a href="https://www.youtube.com/@Dicodeir" target="_blank" rel="noopener noreferrer" aria-label="یوتیوب دیکد">
+        <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.2" width="19" height="13.6" rx="4.2" fill="currentColor"/><polygon points="10,8.7 16.2,12 10,15.3" fill="#08111f"/></svg>
+        <span>یوتیوب</span>
+      </a>
+      <a href="https://www.aparat.com/Dicode" target="_blank" rel="noopener noreferrer" aria-label="آپارات دیکد">
+        <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.0014 1.5938C2.7317 1.5906-1.9119 12.7965 4.641 19.3515c2.975 2.976 7.4496 3.8669 11.3374 2.257 3.8877-1.61 6.4228-5.4036 6.4228-9.6116 0-5.7441-4.6555-10.4012-10.3997-10.4031zM6.11 6.783c.5011-2.5982 3.8927-3.2936 5.376-1.1028 1.4834 2.1907-.4216 5.0816-3.02 4.5822-1.6118-.3098-2.6668-1.868-2.356-3.4794zm4.322 8.9882c-.5045 2.5971-3.8965 3.288-5.377 1.0959-1.4807-2.1922.427-5.0807 3.0247-4.5789 1.612.3114 2.6655 1.8714 2.3524 3.483zm1.2605-2.405c-1.1528-.2231-1.4625-1.7273-.4917-2.3877.9708-.6604 2.256.18 2.0401 1.3343-.1347.7198-.8294 1.1924-1.5484 1.0533zm6.197 3.8375c-.501 2.5981-3.8927 3.2935-5.376 1.1028-1.4834-2.1908.4217-5.0817 3.0201-4.5822 1.6117.3097 2.6667 1.8679 2.356 3.4794zm-1.9662-5.5018c-2.5981-.501-3.2935-3.8962-1.1027-5.3795 2.1907-1.4834 5.0816.4216 4.5822 3.02-.3082 1.6132-1.8668 2.6701-3.4795 2.3595zm-2.3348 11.5618 2.2646.611c1.9827.5263 4.0167-.6542 4.5433-2.6368l.639-2.4016a11.3828 11.3828 0 0 1-7.4469 4.4274zM21.232 3.5985l-2.363-.6284a11.3757 11.3757 0 0 1 4.3538 7.619l.6495-2.4578c.5194-1.9804-.6615-4.0076-2.6403-4.5328zM.6713 13.8086l-.5407 2.04c-.5263 1.9826.6542 4.0166 2.6368 4.5432l2.1066.5618a11.3792 11.3792 0 0 1-4.2027-7.145zM10.3583.702 8.1498.1261C6.166-.4024 4.1296.7785 3.603 2.763l-.5512 2.082A11.3757 11.3757 0 0 1 10.3583.702Z"/></svg>
+        <span>آپارات</span>
+      </a>
+    </nav>
+  </footer>
+</main>
+<script src="panel.js"></script>
+</body>
+</html>
